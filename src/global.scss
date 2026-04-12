@@ -34,4 +34,49 @@
 
 /* @import "@ionic/angular/css/palettes/dark.always.css"; */
 /* @import "@ionic/angular/css/palettes/dark.class.css"; */
-@import '@ionic/angular/css/palettes/dark.system.css';
+@import "@ionic/angular/css/palettes/dark.system.css";
+@import url("https://fonts.googleapis.com/css2?family=Atkinson+Hyperlegible+Mono:ital,wght@0,200..800;1,200..800&family=Roboto+Mono:ital,wght@0,100..700;1,100..700&display=swap");
+
+* {
+  font-family: "Source Code Pro", "Roboto Mono", "Atkinson Hyperlegible Mono", monospace;
+}
+
+ion-progress-bar {
+  height: 10px;
+  border-radius: 10px;
+  border: 1px solid black;
+}
+
+ion-avatar {
+  height: 80px;
+  width: 80px;
+  border: 1px solid black;
+}
+
+ion-header {
+  /* bright brutalist color */
+  --border-width: 1px;
+  --border-color: black;
+
+  border: 1px solid black;
+  box-shadow: 2px 2px 0 0 black;
+
+  border-radius: 0;
+}
+
+ion-toolbar {
+  /* bright brutalist color */
+
+  border: none;
+  box-shadow: 0px 4px 0 0 black;
+
+  border-radius: 0;
+}
+
+ion-tab-button {
+  border: 1px solid black;
+}
+
+ion-item {
+  border-bottom: 1px solid black;
+}
