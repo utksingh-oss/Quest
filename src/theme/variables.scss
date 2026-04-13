@@ -3,20 +3,19 @@
 
 
 :root {
-
-  /** Primary **/
   --ion-color-primary: #5A9CB5;
-  /** Secondary **/
-  --ion-color-secondary: #FACE68;
-  /** Tertiary **/
-  --ion-color-tertiary: #FAAC68;
-  --ion-color-fourt: #FA6868; 
-  /* Some cool and funky colors 
-  91C6BC
-  4B9DA9
-  547792
-  213448
-  94B4C1
-  */
-  
+  --ion-color-secondary: #B4D3D9;
+
+  /* Strong contrast accent */
+  --ion-color-tertiary: #1F6F8B;
+
+  /* Bold UI feedback colors */
+  --ion-color-success: #4CAF88;
+  --ion-color-warning: #F4A261;
+  --ion-color-danger: #E76F51;
+
+  /* Background tones */
+  --ion-color-light: #F4FAFC;
+  --ion-color-medium: #8CAEB8;
+  --ion-color-dark: #1B3A44;
 }
