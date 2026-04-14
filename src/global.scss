@@ -38,13 +38,16 @@
 @import url("https://fonts.googleapis.com/css2?family=Atkinson+Hyperlegible+Mono:ital,wght@0,200..800;1,200..800&family=Roboto+Mono:ital,wght@0,100..700;1,100..700&display=swap");
 
 * {
-  font-family: "Source Code Pro", "Roboto Mono", "Atkinson Hyperlegible Mono", monospace;
+  font-family:
+    "Source Code Pro", "Roboto Mono", "Atkinson Hyperlegible Mono", monospace;
 }
 
 ion-progress-bar {
   height: 10px;
   border-radius: 10px;
   border: 2px solid black;
+  --background: #1e4f5f; /* Empty part */
+  --progress-background: var(--ion-color-success);
 }
 
 ion-avatar {

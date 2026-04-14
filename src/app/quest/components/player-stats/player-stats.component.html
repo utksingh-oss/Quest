@@ -1,49 +1,146 @@
-<ion-card class="player-stats-card" color="primary">
-  <ion-item color="tertiary">
-    <ion-avatar aria-hidden="true" slot="start">
-      <img alt=""
-        src="https://static.vecteezy.com/system/resources/previews/060/126/977/non_2x/pixel-art-male-character-portrait-with-brown-hair-and-blue-hoodie-facing-forward-vector.jpg" />
+<ion-card class="equipment-card">
+
+  <!-- Character Header -->
+  <div class="character-header">
+
+    <ion-avatar class="equipment-avatar">
+      <img
+        src="../../../../assets/images/Knight.png"
+        alt="Player Avatar" />
     </ion-avatar>
-    <ion-label>Noob Knight</ion-label>
-  </ion-item>
-  <ion-card-content class="ion-no-padding">
-    <ion-grid>
-      <ion-row class="ion-align-items-center" class="progress-bar-row">
-        <ion-col size="1" class="ion-align-items-center">
-          <i class="fa-solid fa-brain fa-xl"></i>
-        </ion-col>
-        <ion-col>
-          <ion-progress-bar value="0.6" color="success">
-          </ion-progress-bar>
-          <div class="xp-text">
-            Level 3 — 240 / 500 XP
-          </div>
-        </ion-col>
-      </ion-row>
-      <ion-row class="ion-align-items-center ion-margin-vertical" class="progress-bar-row" id="add-top-bottom-margin">
-        <ion-col size="1">
-          <i class="fa-solid fa-dumbbell fa-xl"></i>
-        </ion-col>
-        <ion-col>
-          <ion-progress-bar value="0.3" color="warning">
-          </ion-progress-bar>
-          <div class="xp-text">
-            Level 3 — 240 / 500 XP
-          </div>
-        </ion-col>
-      </ion-row>
-      <ion-row class="ion-align-items-center" class="progress-bar-row">
-        <ion-col size="1">
-          <i class="fa-solid fa-bullseye fa-xl"></i>
-        </ion-col>
-        <ion-col>
-          <ion-progress-bar value="0.8" color="danger">
-          </ion-progress-bar>
-          <div class="xp-text">
-            Level 3 — 240 / 500 XP
-          </div>
-        </ion-col>
-      </ion-row>
-    </ion-grid>
-  </ion-card-content>
+
+    <div class="character-info">
+
+      <div class="character-name">
+        Noob Knight
+      </div>
+
+      <div class="character-meta">
+        ⭐ Level 3 • 🪙 200 Gold
+      </div>
+
+    </div>
+
+  </div>
+
+
+  <!-- Divider -->
+  <div class="sheet-divider"></div>
+
+
+  <!-- XP Section -->
+  <div class="xp-row">
+
+    <!-- Top Row -->
+    <div class="xp-header">
+
+      <span class="xp-label">
+        EXPERIENCE
+      </span>
+
+      <span class="xp-levels">
+        Lv.3 → Lv.4
+      </span>
+
+    </div>
+
+    <!-- XP Bar -->
+    <ion-progress-bar value="0.48" class="xp-bar">
+    </ion-progress-bar>
+
+    <!-- Bottom Row -->
+    <div class="xp-footer">
+
+      <span class="xp-text">
+        240 / 500 XP
+      </span>
+
+    </div>
+
+  </div>
+
+
+  <!-- Divider -->
+  <div class="sheet-divider"></div>
+
+
+  <!-- Stats Section -->
+  <ion-grid class="stat-sheet">
+
+    <!-- Intelligence -->
+    <ion-row class="stat-line">
+
+      <ion-col>
+
+        <div class="stat-row-flex">
+
+          <span class="stat-left">
+            <i class="fa-solid fa-brain stat-icon"></i>
+            INTELLIGENCE
+          </span>
+
+          <span class="stat-dots"></span>
+
+          <span class="stat-value intelligence">
+            50
+          </span>
+
+        </div>
+
+      </ion-col>
+
+    </ion-row>
+
+
+    <!-- Strength -->
+    <ion-row class="stat-line">
+
+      <ion-col>
+
+        <div class="stat-row-flex">
+
+          <span class="stat-left">
+            <i class="fa-solid fa-dumbbell stat-icon"></i>
+            STRENGTH
+          </span>
+
+          <span class="stat-dots"></span>
+
+          <span class="stat-value strength">
+            25
+          </span>
+
+        </div>
+
+      </ion-col>
+
+    </ion-row>
+
+
+    <!-- Accuracy -->
+    <ion-row class="stat-line">
+
+      <ion-col>
+
+        <div class="stat-row-flex">
+
+          <span class="stat-left">
+            <i class="fa-solid fa-bullseye stat-icon"></i>
+            ACCURACY
+          </span>
+
+          <span class="stat-dots"></span>
+
+          <span class="stat-value accuracy">
+            100
+          </span>
+
+        </div>
+
+      </ion-col>
+
+    </ion-row>
+
+  </ion-grid>
+
 </ion-card>

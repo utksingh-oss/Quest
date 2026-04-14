@@ -1,13 +1,163 @@
-.progress-bar-row {
+/* Main Card */
+.equipment-card {
+  margin: 12px;
+  padding: 12px;
+  background: var(--ion-color-primary);
+  border: 2px solid black;
+  box-shadow: 6px 6px 0px black;
+  color: white;
+}
+
+
+/* Header */
+.character-header {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+}
+
+
+/* Avatar */
+.equipment-avatar {
+  width: 60px;
+  height: 60px;
   border: 1px solid black;
-  background: var(--ion-color-tertiary);
 }
 
-#add-top-bottom-margin{
-  margin-top: 5px;
-  margin-bottom: 5px;
+
+/* Name */
+.character-name {
+  font-weight: bold;
+  font-size: 1.05rem;
+  color: white;
 }
 
-.ion-no-padding {
-  padding: 0px;
+
+/* Level + Gold */
+.character-meta {
+  font-size: 0.75rem;
+  opacity: 0.9;
 }
+
+
+/* Divider */
+
+.sheet-divider {
+  height: 2px;
+  background: black;
+  margin: 10px 0;
+}
+
+
+/* XP Section */
+
+.xp-row {
+  display: flex;
+  flex-direction: column;
+  gap: 4px;
+}
+
+
+.xp-label {
+  font-size: 0.7rem;
+  font-weight: bold;
+  letter-spacing: 1px;
+}
+
+
+.xp-bar {
+  height: 8px;
+}
+
+
+.xp-levels {
+  font-size: 0.7rem;
+  font-weight: bold;
+  opacity: 0.9;
+}
+
+
+.xp-text {
+  text-align: right;
+  font-size: 0.7rem;
+}
+
+
+.xp-bar {
+  height: 8px;
+  border: 2px solid black;
+  border-radius: 6px;
+  /* VERY IMPORTANT — fixes full green issue */
+  --background: #2f6f86;
+  --progress-background: var(--ion-color-success);
+}
+
+/* Footer Row */
+.xp-footer {
+  display: flex;
+  justify-content: flex-end;
+}
+
+
+/* Stat Sheet */
+
+.stat-sheet {
+  padding: 0;
+}
+
+
+/* Stat Row */
+
+.stat-line {
+  padding: 8px 0;
+  border-bottom: 1px dashed black;
+}
+
+.stat-line:last-child {
+  border-bottom: none;
+}
+
+
+/* Flex Layout */
+.stat-row-flex {
+  display: flex;
+  align-items: center;
+  font-size: 0.85rem;
+}
+
+
+/* Left Section */
+
+.stat-left {
+  display: flex;
+  align-items: center;
+  gap: 6px;
+  white-space: nowrap;
+}
+
+
+/* Icon */
+
+.stat-icon {
+  font-size: 0.9rem;
+}
+
+
+/* Dotted Leader Line */
+
+.stat-dots {
+  flex: 1;
+  border-bottom: 1px dotted black;
+  margin: 0 8px;
+}
+
+
+/* Value Numbers */
+
+.stat-value {
+  font-weight: bold;
+  min-width: 30px;
+  text-align: right;
+}
+
+
