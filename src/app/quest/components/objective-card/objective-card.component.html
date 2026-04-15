@@ -1,0 +1,48 @@
+<ion-card
+  class="objective-card-compact"
+  [ngClass]="[
+    objective.difficulty,
+    objective.completed ? 'completed' : ''
+  ]">
+
+  <!-- Header Row -->
+  <div class="objective-row">
+
+    <div class="left">
+
+      <span class="difficulty-tag">
+        {{ objective.difficulty | uppercase }}
+      </span>
+
+      <div class="title">
+        {{ objective.title }}
+      </div>
+
+    </div>
+
+    <!-- Circular Checkbox -->
+    <ion-checkbox
+      class="complete-checkbox"
+      (ionChange)="onComplete(objective)">
+    </ion-checkbox>
+
+  </div>
+
+  <!-- Meta Row -->
+  <div class="meta-row">
+
+    <div class="time">
+      ⏱ {{ objective.timeLimit }}
+    </div>
+
+    <div class="rewards">
+
+      ⭐ +{{ objective.rewards.xp }}
+
+      💰 +{{ objective.rewards.gold }}
+
+    </div>
+
+  </div>
+
+</ion-card>

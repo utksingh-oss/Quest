@@ -5,4 +5,7 @@
 />
 <ion-content class="ion-padding" color="secondary">
   <app-player-stats></app-player-stats>
+  @for (objective of objectives; track objective.id ){
+    <app-objective-card [objective]="objective"></app-objective-card>
+  }
 </ion-content>

@@ -1,0 +1,194 @@
+/* =========================================
+   Objective Card - Compact RPG Style
+   ========================================= */
+
+.objective-card-compact {
+  position: relative;
+  border: 1.5px solid black;
+  background: #6EAEC4; /* Slightly lighter than player card */
+  padding: 10px 12px;
+  margin-top: 10px;
+  box-shadow: 4px 4px 0px black;
+  transition: 0.2s ease;
+  color: white;
+}
+
+/* =========================================
+   Layout
+   ========================================= */
+
+.objective-row {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.left {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+
+}
+
+/* =========================================
+   Difficulty Tag
+   ========================================= */
+
+.difficulty-tag {
+  font-size: 10px;
+  font-weight: bold;
+  background: white;
+  color: black;
+  padding: 2px 6px;
+  border-radius: 5px;
+  border: 1px solid black;
+  letter-spacing: 0.5px;
+}
+
+/* =========================================
+   Title
+   ========================================= */
+
+.title {
+  font-size: 14px;
+  font-weight: 600;
+  letter-spacing: 0.3px;
+}
+
+/* =========================================
+   Meta Row
+   ========================================= */
+
+.meta-row {
+  display: flex;
+  justify-content: space-between;
+  margin-top: 6px;
+  font-size: 12px;
+  opacity: 0.95;
+}
+
+/* =========================================
+   Time
+   ========================================= */
+
+.time {
+  display: flex;
+  align-items: center;
+  gap: 4px;
+}
+
+/* =========================================
+   Rewards
+   ========================================= */
+
+.rewards {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+
+/* =========================================
+   Circular Checkbox Styling
+   ========================================= */
+
+.complete-checkbox {
+  --size: 22px;
+  --checkbox-background: var(--ion-color-secondary);
+  --border-color: black;
+  --border-color-checked: black;
+  --border-width: 2px;
+  --checkmark-color: white;
+  --background-checked: #4CAF50;
+  --checkbox-background-checked:green;
+  border-radius: 50%;
+}
+
+/* =========================================
+   Difficulty Colors (Left Border)
+   ========================================= */
+
+.easy {
+  border-left: 5px solid #4CAF50;
+}
+
+.medium {
+  border-left: 5px solid #FFC107;
+}
+
+.hard {
+  border-left: 5px solid #F44336;
+}
+
+.epic {
+  border-left: 5px solid #9C27B0;
+}
+
+/* =========================================
+   Completed State
+   ========================================= */
+
+.completed {
+  opacity: 0.65;
+  background: #4CAF50;;
+}
+
+/* Strike-through title */
+
+.completed .title {
+  text-decoration: line-through;
+}
+
+/* =========================================
+   Hover Effect (Desktop Friendly)
+   ========================================= */
+
+.objective-card-compact:hover {
+  transform: translateY(-1px);
+  box-shadow:
+    5px 5px 0px black;
+}
+
+/* =========================================
+   Active Click Feedback
+   ========================================= */
+
+.objective-card-compact:active {
+  transform: translateY(1px);
+  box-shadow:
+    3px 3px 0px black;
+}
+
+/* =========================================
+   Optional: Instruction Section (Future)
+   ========================================= */
+
+.instruction {
+  font-size: 12px;
+  margin-top: 6px;
+  opacity: 0.9;
+}
+
+/* =========================================
+   Optional: Skills Row (Future Upgrade)
+   ========================================= */
+
+.skills {
+  display: flex;
+  gap: 10px;
+  margin-top: 4px;
+  font-size: 11px;
+}
+
+/* =========================================
+   Responsive Tweaks
+   ========================================= */
+
+@media (max-width: 480px) {
+  .title {
+    font-size: 13px;
+  }
+
+  .meta-row {
+    font-size: 11px;
+  }
+}
