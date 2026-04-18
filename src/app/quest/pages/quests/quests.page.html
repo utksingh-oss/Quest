@@ -5,5 +5,7 @@
 />
 
 <ion-content class="ion-padding" color="secondary">
-  Content will go here 
+  @for(quest of quests; track quest.id) {
+    <app-quest-card [quest] = "quest"></app-quest-card>
+  }
 </ion-content>

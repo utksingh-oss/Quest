@@ -1,0 +1,37 @@
+<div class="quest-card" [ngClass]="quest.status">
+
+  <!-- HEADER -->
+  <div class="quest-header">
+
+    <div class="quest-info">
+      <h3 class="quest-title">{{ quest.title }}</h3>
+      <p class="quest-detail">{{ quest.detail }}</p>
+    </div>
+  </div>
+
+  <!-- PROGRESS -->
+  <div class="quest-progress">
+    <div class="progress-label">
+      Progress {{ completedTasks }} / {{ totalTasks }}
+    </div>
+
+    <div class="progress-bar">
+      <div 
+        class="progress-fill"
+        [style.width.%]="progressPercent">
+      </div>
+    </div>
+  </div>
+
+  <!-- REWARDS -->
+  <div class="quest-rewards">
+    <span>⭐ {{ quest.completionBonus.xp }}</span>
+    <span>🪙 {{ quest.completionBonus.coin }}</span>
+  </div>
+
+  <!-- ACTION -->
+  <button class="quest-btn">
+    {{ getButtonLabel(quest.status) }}
+  </button>
+
+</div>
