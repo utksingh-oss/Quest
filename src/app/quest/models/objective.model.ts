@@ -1,14 +1,14 @@
 export interface Objective {
 
   id: string;
-
   title: string;
-
   instruction: string;
-
   difficulty: 'easy' | 'medium' | 'hard' | 'epic';
+  
+  endDate: string;
 
-  timeLimit: string;
+  isTimedActivity: boolean;
+  timeDuration: string;
 
   skills: {
     intelligence?: number;

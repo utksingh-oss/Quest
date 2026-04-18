@@ -1,0 +1,72 @@
+<ion-card class="timer-card" color="primary">
+
+  <ion-card-content>
+
+    <div class="circle-container">
+
+      <svg
+        class="progress-ring"
+        width="160"
+        height="160"
+      >
+
+        <!-- Background circle -->
+
+        <circle
+          class="progress-bg"
+          stroke-width="8"
+          fill="transparent"
+          r="70"
+          cx="80"
+          cy="80"
+        />
+
+        <!-- Progress circle -->
+
+        <circle
+          class="progress-ring__circle"
+          stroke-width="8"
+          fill="transparent"
+          r="70"
+          cx="80"
+          cy="80"
+          [attr.stroke-dasharray]="circumference"
+          [attr.stroke-dashoffset]="dashOffset"
+        />
+
+      </svg>
+
+      <div class="time-text">
+        {{ displayTime }}
+      </div>
+
+    </div>
+
+    <div class="controls">
+
+      <ion-button
+        color="tertiary"
+        size="small"
+        (click)="start()"
+      >
+        @if(intervalId === null) {
+          <ion-icon name="play-outline"></ion-icon>
+        }@else {
+          <ion-icon name="pause-outline"></ion-icon>
+        }
+
+      </ion-button>
+
+      <ion-button
+        color="tertiary"
+        size="small"
+        (click)="reset()"
+      >
+        <ion-icon name="refresh-outline"></ion-icon>
+      </ion-button>
+
+    </div>
+
+  </ion-card-content>
+
+</ion-card>

@@ -1,0 +1,55 @@
+.timer-card {
+  text-align: center;
+  border-radius: 0;
+  border: 1px solid black;
+}
+
+.circle-container {
+  position: relative;
+  width: 160px;
+  height: 160px;
+  margin: auto;
+}
+
+.progress-ring {
+  transform: rotate(-90deg);
+}
+
+.progress-border {
+  stroke: black;
+  stroke-width: 1;
+  opacity: 1; /* remove fade */
+}
+
+.progress-bg {
+  stroke: #e0e0e0;
+  stroke-linecap: round;
+}
+
+.progress-ring__circle {
+  stroke: var(--ion-color-tertiary);
+  stroke-linecap: round;
+  transition: stroke-dashoffset 0.1s linear;
+}
+
+.time-text {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  font-size: 1.4rem;
+  font-weight: bold;
+  letter-spacing: 1px;
+}
+
+.controls {
+  margin-top: 12px;
+  display: flex;
+  justify-content: center;
+  gap: 8px;
+}
+
+ion-button {
+  --border-radius: 0;
+  border: 1px solid black;
+}

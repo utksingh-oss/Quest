@@ -5,7 +5,7 @@ import { IonContent, IonHeader, IonTitle, IonToolbar } from '@ionic/angular/stan
 import { HeaderToolbarComponent } from 'src/app/common/header-toolbar/header-toolbar.component';
 import { PlayerStatsComponent } from "../../components/player-stats/player-stats.component";
 import { Objective } from '../../models/objective.model';
-import { mockObjectives } from '../../models/mockObjectData';
+import { mockObjectives } from '../../models/mockData/mockObjectData';
 import { ObjectiveCardComponent } from '../../components/objective-card/objective-card.component';
 
 @Component({

@@ -1,4 +1,5 @@
-import { Objective } from './objective.model';
+import { trendingUpOutline } from 'ionicons/icons';
+import { Objective } from '../objective.model';
 
 export const mockObjectives: Objective[] = [
   {
@@ -6,7 +7,9 @@ export const mockObjectives: Objective[] = [
     title: 'Meditate 10 Minutes',
     instruction: 'Sit quietly and focus on breathing for 10 minutes.',
     difficulty: 'easy',
-    timeLimit: 'Today',
+    endDate: 'Today',
+    isTimedActivity: true,
+    timeDuration: '10 mins',
     skills: {
       willpower: 1,
     },
@@ -22,7 +25,9 @@ export const mockObjectives: Objective[] = [
     title: 'Read 10 Pages',
     instruction: 'Read at least 10 pages from a learning book.',
     difficulty: 'easy',
-    timeLimit: 'Today',
+    endDate: 'Today',
+    isTimedActivity: false, 
+    timeDuration: 'none',
     skills: {
       intelligence: 1,
     },
@@ -38,7 +43,9 @@ export const mockObjectives: Objective[] = [
     title: 'Complete Angular Lesson',
     instruction: 'Finish Angular routing tutorial and practice.',
     difficulty: 'medium',
-    timeLimit: '2 Hours',
+    endDate: 'Today',
+    isTimedActivity: true, 
+    timeDuration: '2 Hours',
     skills: {
       intelligence: 2,
     },
@@ -54,7 +61,9 @@ export const mockObjectives: Objective[] = [
     title: '30 Minute Workout',
     instruction: 'Do pushups, squats, and jumping jacks.',
     difficulty: 'medium',
-    timeLimit: '30 Minutes',
+    endDate: 'today', 
+    isTimedActivity: true,
+    timeDuration: '30 Minutes',
     skills: {
       strength: 2,
     },
@@ -70,7 +79,9 @@ export const mockObjectives: Objective[] = [
     title: 'No Phone for 1 Hour',
     instruction: 'Avoid using phone or social media for 1 hour.',
     difficulty: 'medium',
-    timeLimit: '1 Hour',
+    endDate: 'today',
+    isTimedActivity: true, 
+    timeDuration: '1 Hour',
     skills: {
       willpower: 2,
     },
@@ -86,7 +97,9 @@ export const mockObjectives: Objective[] = [
     title: 'Deep Work Session',
     instruction: 'Work on one important task without distraction.',
     difficulty: 'hard',
-    timeLimit: '45 Minutes',
+    endDate: 'today',
+    isTimedActivity: true, 
+    timeDuration: '45 Minutes',
     skills: {
       willpower: 3,
       intelligence: 1,
@@ -103,7 +116,9 @@ export const mockObjectives: Objective[] = [
     title: 'Run 2 Kilometers',
     instruction: 'Go outside and complete a 2km run.',
     difficulty: 'hard',
-    timeLimit: '25 Minutes',
+    endDate: 'today',
+    isTimedActivity: true, 
+    timeDuration: '25 Minutes',
     skills: {
       strength: 3,
     },
@@ -119,7 +134,9 @@ export const mockObjectives: Objective[] = [
     title: 'Morning Routine Mastery',
     instruction: 'Complete full morning routine without skipping.',
     difficulty: 'epic',
-    timeLimit: 'Before 9 AM',
+    endDate: 'Before 9 AM',
+    isTimedActivity: false, 
+    timeDuration: 'none',
     skills: {
       willpower: 4,
       intelligence: 1,

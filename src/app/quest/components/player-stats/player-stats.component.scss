@@ -1,7 +1,7 @@
 /* Main Card */
 .equipment-card {
   margin: 12px;
-  padding: 12px;
+  padding: 6px;
   background: var(--ion-color-primary);
   border: 2px solid black;
   box-shadow: 4px 4px 0px black;
@@ -54,7 +54,7 @@
 .xp-row {
   display: flex;
   flex-direction: column;
-  gap: 4px;
+  gap: 2px;
 }
 
 
@@ -63,12 +63,6 @@
   font-weight: bold;
   letter-spacing: 1px;
 }
-
-
-.xp-bar {
-  height: 8px;
-}
-
 
 .xp-levels {
   font-size: 0.7rem;
@@ -84,7 +78,7 @@
 
 
 .xp-bar {
-  height: 8px;
+  height: 12px;
   border: 2px solid black;
   border-radius: 6px;
   /* VERY IMPORTANT — fixes full green issue */
@@ -107,16 +101,6 @@
 
 
 /* Stat Row */
-
-.stat-line {
-  padding: 8px 0;
-  border-bottom: 1px dashed black;
-}
-
-.stat-line:last-child {
-  border-bottom: none;
-}
-
 
 /* Flex Layout */
 .stat-row-flex {
@@ -144,7 +128,6 @@
 
 
 /* Dotted Leader Line */
-
 .stat-dots {
   flex: 1;
   border-bottom: 1px dotted black;
@@ -153,7 +136,6 @@
 
 
 /* Value Numbers */
-
 .stat-value {
   font-weight: bold;
   min-width: 30px;

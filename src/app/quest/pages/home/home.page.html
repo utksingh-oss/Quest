@@ -1,11 +1,10 @@
-<app-header-toolbar
- [toolbarTitle]="'Home'" 
- [isDisplayPoint]="true" 
- [totalPoints]="200"
-/>
-<ion-content class="ion-padding" color="secondary">
+<ion-header class="header-section">
+  <app-header-toolbar [toolbarTitle]="'Home'" [isDisplayPoint]="true" [totalPoints]="200" />
   <app-player-stats></app-player-stats>
+</ion-header>
+<ion-content class="ion-padding" color="secondary">
+
   @for (objective of objectives; track objective.id ){
-    <app-objective-card [objective]="objective"></app-objective-card>
+  <app-objective-card [objective]="objective"></app-objective-card>
   }
 </ion-content>
