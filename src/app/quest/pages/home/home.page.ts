@@ -7,13 +7,14 @@ import { PlayerStatsComponent } from "../../components/player-stats/player-stats
 import { Objective } from '../../models/objective.model';
 import { mockObjectives } from '../../models/mockData/mockObjectData';
 import { ObjectiveCardComponent } from '../../components/objective-card/objective-card.component';
+import { StatusFilterComponent } from "../../components/status-filter/status-filter.component";
 
 @Component({
   selector: 'app-home',
   templateUrl: './home.page.html',
   styleUrls: ['./home.page.scss'],
   standalone: true,
-  imports: [IonContent, IonHeader, IonTitle, IonToolbar, CommonModule, FormsModule, HeaderToolbarComponent, PlayerStatsComponent, ObjectiveCardComponent]
+  imports: [IonContent, IonHeader, IonTitle, IonToolbar, CommonModule, FormsModule, HeaderToolbarComponent, PlayerStatsComponent, ObjectiveCardComponent, StatusFilterComponent]
 })
 export class HomePage implements OnInit {
   objectives: Objective[] = mockObjectives;

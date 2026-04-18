@@ -1,0 +1,28 @@
+<!-- STATUS -->
+<div class="status-filter-container">
+  <ion-segment [(ngModel)]="selectedStatus" (ionChange)="applyFilters()" mode="md">
+    <ion-segment-button value="all">
+      <ion-label>ALL</ion-label>
+    </ion-segment-button>
+    <ion-segment-button value="completed">
+      <ion-label>COMPLETED</ion-label>
+    </ion-segment-button>
+    <ion-segment-button value="pending">
+      <ion-label>PENDING</ion-label>
+    </ion-segment-button>
+    <ion-segment-button value="failed">
+      <ion-label>FAILED</ion-label>
+    </ion-segment-button>
+  </ion-segment>
+</div>
+<!-- DIFFICULTY -->
+<div class="difficulty-filters">
+  @for (diff of difficulties; track diff) {
+  <ion-chip [outline]="selectedDifficulty !== diff" [color]="selectedDifficulty === diff ? 'primary' : 'medium'"
+    (click)="selectDifficulty(diff)">
+    <ion-label>
+      {{ diff }}
+    </ion-label>
+  </ion-chip>
+  }
+</div>
