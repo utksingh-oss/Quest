@@ -1,7 +1,6 @@
-import { trendingUpOutline } from 'ionicons/icons';
 import { Objective } from '../objective.model';
 
-export const mockObjectives: Objective[] = [
+export const MOCK_OBJECTIVES: Objective[] = [
   {
     id: 'obj-001',
     title: 'Meditate 10 Minutes',

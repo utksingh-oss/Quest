@@ -80,7 +80,7 @@
 .xp-bar {
   height: 12px;
   border: 2px solid black;
-  border-radius: 6px;
+  border-radius: 0px;
   /* VERY IMPORTANT — fixes full green issue */
   --background: #2f6f86;
   --progress-background: var(--ion-color-success);

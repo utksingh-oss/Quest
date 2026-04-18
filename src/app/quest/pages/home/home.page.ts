@@ -5,7 +5,7 @@ import { IonContent, IonHeader, IonTitle, IonToolbar } from '@ionic/angular/stan
 import { HeaderToolbarComponent } from 'src/app/common/header-toolbar/header-toolbar.component';
 import { PlayerStatsComponent } from "../../components/player-stats/player-stats.component";
 import { Objective } from '../../models/objective.model';
-import { mockObjectives } from '../../models/mockData/mockObjectData';
+import { MOCK_OBJECTIVES } from '../../models/mockData/mock-objectives';
 import { ObjectiveCardComponent } from '../../components/objective-card/objective-card.component';
 import { StatusFilterComponent } from "../../components/status-filter/status-filter.component";
 
@@ -17,7 +17,7 @@ import { StatusFilterComponent } from "../../components/status-filter/status-fil
   imports: [IonContent, IonHeader, IonTitle, IonToolbar, CommonModule, FormsModule, HeaderToolbarComponent, PlayerStatsComponent, ObjectiveCardComponent, StatusFilterComponent]
 })
 export class HomePage implements OnInit {
-  objectives: Objective[] = mockObjectives;
+  objectives: Objective[] = MOCK_OBJECTIVES;
 
   constructor() { }
 

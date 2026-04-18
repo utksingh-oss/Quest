@@ -1,6 +1,6 @@
 import { Objective } from "./objective.model";
 
-export interface Path {
+export interface Quest {
     id: string; 
     title: string;
     detail: string;
