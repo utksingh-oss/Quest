@@ -1,9 +1,51 @@
-<app-header-toolbar
- [toolbarTitle]="'Rules'" 
- [isDisplayPoint]="true" 
- [totalPoints]="200"
-/>
+<app-header-toolbar [toolbarTitle]="'Rules'" [isDisplayPoint]="true" [totalPoints]="200" />
 
 <ion-content class="ion-padding" color="secondary">
-  <p>Welcome to the Rules Page!</p>
+  <ion-accordion-group expand="inset" class="rules-accordion">
+
+    @for(rule of rules; track rule.id){
+     <ion-accordion>
+
+    <!-- HEADER -->
+    <!-- IMPORTANT: button="false" -->
+    <ion-item 
+      slot="header" 
+      class="rule-header" 
+      lines="none"
+      button="false"
+      detail="false"
+    >
+      <div class="rule-row">
+
+        <div class="rule-title">
+          {{ rule.title }}
+        </div>
+
+        <div class="rule-right">
+          <span class="xp">⭐ {{ rule.price.xp }}</span>
+          <span class="coins">🪙 {{ rule.price.coins }}</span>
+
+          <button class="delete-btn">✕</button>
+
+          <!-- Your custom chevron -->
+          <ion-icon name="chevron-down-outline" class="chevron"></ion-icon>
+        </div>
+
+      </div>
+    </ion-item>
+
+    <!-- CONTENT -->
+    <div slot="content" class="rule-content">
+      <p>{{ rule.description }}</p>
+
+      <div class="actions">
+        <button class="btn success">✔ Done</button>
+        <button class="btn fail">✖ Missed</button>
+      </div>
+    </div>
+
+  </ion-accordion>
+    }
+
+  </ion-accordion-group>
 </ion-content>

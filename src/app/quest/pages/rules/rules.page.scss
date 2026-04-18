@@ -1,0 +1,151 @@
+/* 🔥 RESET IONIC DEFAULTS */
+.rules-accordion ion-item {
+  --background: transparent;
+  --padding-start: 0;
+  --inner-padding-end: 0;
+}
+
+.rules-accordion ion-item::part(native) {
+  padding: 0;
+  background: transparent;
+}
+
+/* 🧱 SINGLE CARD LOOK */
+.rule-header {
+  margin-bottom: 0; /* important */
+}
+
+/* HEADER */
+.rule-row {
+  width: 100%;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+
+  padding: 12px;
+
+  background: #6f9fb1;
+  border: 2px solid #000;
+  border-bottom: none; /* 🔥 merges with content */
+
+  box-shadow: 4px 4px 0 #000;
+}
+
+/* CONTENT */
+.rule-content {
+  background: #9ec1cf;
+
+  border: 2px solid #000;
+  border-top: none; /* 🔥 merges with header */
+
+  padding: 12px;
+  margin-bottom: 14px;
+
+  box-shadow: 4px 4px 0 #000;
+}
+
+/* LEFT */
+.rule-title {
+  font-weight: 600;
+  font-size: 14px;
+  color: #f5f5f5;
+}
+
+/* RIGHT SIDE */
+.rule-right {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+}
+
+/* REWARDS */
+.xp, .coins {
+  font-size: 12px;
+  font-weight: bold;
+}
+
+.xp { color: #ffd54f; }
+.coins { color: #ffca28; }
+
+/* DELETE BUTTON */
+.delete-btn {
+  width: 26px;
+  height: 26px;
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  border: 2px solid #000;
+  background: #ff6b6b;
+  font-weight: bold;
+
+  box-shadow: 2px 2px 0 #000;
+}
+
+/* CHEVRON */
+.chevron {
+  font-size: 18px;
+  color: #333;
+}
+
+/* ACTION BUTTONS */
+.actions {
+  display: flex;
+  gap: 10px;
+  margin-top: 10px;
+}
+
+.btn {
+  flex: 1;
+  border: 2px solid #000;
+  padding: 6px;
+  font-weight: bold;
+  box-shadow: 3px 3px 0 #000;
+}
+
+.btn.success { background: #66bb6a; }
+.btn.fail { background: #ef5350; }
+
+/* CLICK FEEDBACK */
+.btn:active,
+.delete-btn:active {
+  transform: translate(2px, 2px);
+  box-shadow: 1px 1px 0 #000;
+}
+
+/* 🔥 REMOVE IONIC TOGGLE ICON SPACE */
+ion-accordion::part(toggle-icon) {
+  display: none;
+}
+
+/* ALSO REMOVE EXTRA RIGHT SPACE */
+ion-item::part(native) {
+  padding-right: 0 !important;
+}
+
+ion-accordion {
+  --expand-icon-display: none;
+}
+
+/* 🚨 REMOVE TOGGLE CONTAINER COMPLETELY */
+ion-accordion::part(toggle-icon) {
+  display: none !important;
+}
+
+/* 🚨 REMOVE IONIC DETAIL ARROW SPACE */
+ion-item::part(detail-icon) {
+  display: none !important;
+}
+
+/* 🚨 FORCE FULL WIDTH */
+ion-item::part(native) {
+  padding: 0 !important;
+  margin: 0 !important;
+}
+
+/* 🚨 KILL ANY RIGHT SIDE RESERVED SPACE */
+.rules-accordion ion-item {
+  --inner-padding-end: 0 !important;
+  --padding-end: 0 !important;
+}
