@@ -5,6 +5,7 @@ export const MOCK_QUESTS: Quest[] = [
     id: 'quest-001',
     title: 'Morning Discipline',
     detail: 'Start the day with focused routines to build momentum.',
+    type: 'discipline',
     status: 'active',
 
     tasks: [
@@ -65,13 +66,14 @@ export const MOCK_QUESTS: Quest[] = [
       coin: 25
     },
 
-    imageUrl: 'assets/quests/morning-discipline.png'
+    imageUrl: 'assets/images/scenery_1.jpg'
   },
 
   {
     id: 'quest-002',
     title: 'Scholar’s Path',
     detail: 'Sharpen your mind through focused learning.',
+    type: 'learning',
     status: 'pending',
 
     tasks: [
@@ -132,13 +134,14 @@ export const MOCK_QUESTS: Quest[] = [
       coin: 60
     },
 
-    imageUrl: 'assets/quests/scholar-path.png'
+    imageUrl: 'assets/images/scenery_2.jpg'
   },
 
   {
     id: 'quest-003',
     title: 'Warrior Conditioning',
     detail: 'Build strength and endurance through physical effort.',
+    type: 'fitness',
     status: 'active',
 
     tasks: [
@@ -200,13 +203,14 @@ export const MOCK_QUESTS: Quest[] = [
       coin: 80
     },
 
-    imageUrl: 'assets/quests/warrior-conditioning.png'
+    imageUrl: 'assets/images/scenery_2.jpg'
   },
 
   {
     id: 'quest-004',
     title: 'Legendary Focus',
     detail: 'Enter deep focus and complete high-difficulty tasks.',
+    type: 'focus',
     status: 'failed',
 
     tasks: [
@@ -242,6 +246,6 @@ export const MOCK_QUESTS: Quest[] = [
       coin: 150
     },
 
-    imageUrl: 'assets/quests/legendary-focus.png'
+    imageUrl: 'assets/images/scenery_1.jpg'
   }
 ];

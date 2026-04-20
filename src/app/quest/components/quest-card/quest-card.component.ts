@@ -1,5 +1,5 @@
 import { Component, Input, OnInit } from '@angular/core';
-import { Quest } from '../../models/quest.model';
+import { Quest, QuestType } from '../../models/quest.model';
 import { NgClass } from '@angular/common';
 
 @Component({
@@ -13,12 +13,13 @@ export class QuestCardComponent implements OnInit {
     id: 'quest-001',
     title: 'Morning Discipline',
     detail: 'Start the day with focused routines to build momentum.',
+    type: 'discipline',
     status: 'active',
     completionBonus: {
       xp: 0,
       coin: 0
     },
-    imageUrl: '',
+    imageUrl: 'assets/images/scenery_1.jpg',
     tasks: [
       {
         order: 1,
@@ -50,6 +51,18 @@ export class QuestCardComponent implements OnInit {
   constructor() {}
 
   ngOnInit() {}
+
+  private readonly questTypeImages: Record<QuestType, string> = {
+    discipline: 'assets/images/scenery_1.jpg',
+    learning: 'assets/images/scenery_2.jpg',
+    fitness: 'assets/images/scenery_2.jpg',
+    focus: 'assets/images/scenery_1.jpg',
+  };
+
+  get questBackgroundImage() {
+    const imageUrl = this.questTypeImages[this.quest.type] || this.quest.imageUrl;
+    return `url("${imageUrl}")`;
+  }
 
   get completedTasks() {
     return this.quest?.tasks.filter((t) => t.objective.completed).length;

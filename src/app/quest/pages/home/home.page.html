@@ -1,11 +1,16 @@
 <ion-header class="header-section">
   <app-header-toolbar [toolbarTitle]="'Home'" [isDisplayPoint]="true" [totalPoints]="200" />
-  <app-player-stats></app-player-stats>
-  <app-status-filter></app-status-filter>
 </ion-header>
-<ion-content class="ion-padding" color="secondary">
 
-  @for (objective of objectives; track objective.id ){
-  <app-objective-card [objective]="objective"></app-objective-card>
-  }
+<ion-content color="secondary">
+  <div class="home-shell">
+    <app-player-stats></app-player-stats>
+    <app-status-filter></app-status-filter>
+
+    <div class="objective-list">
+      @for (objective of objectives; track objective.id ){
+        <app-objective-card [objective]="objective"></app-objective-card>
+      }
+    </div>
+  </div>
 </ion-content>

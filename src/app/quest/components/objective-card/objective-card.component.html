@@ -23,10 +23,18 @@
     <!-- Circular Checkbox -->
     <ion-checkbox
       class="complete-checkbox"
-      (ionChange)="onComplete(objective)">
+      [checked]="objective.completed"
+      (ionChange)="onComplete($event)">
     </ion-checkbox>
 
   </div>
+
+  @if(showRewardPop) {
+    <div class="reward-pop">
+      +{{ objective.rewards.xp }} XP
+      +{{ objective.rewards.gold }} Gold
+    </div>
+  }
 
   <!-- Meta Row -->
   <div class="meta-row">

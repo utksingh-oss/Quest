@@ -1,0 +1,106 @@
+ion-content {
+  --padding-start: 14px;
+  --padding-end: 18px;
+  --padding-top: 14px;
+  --padding-bottom: 18px;
+}
+
+.shop-grid {
+  display: grid;
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+  gap: 10px;
+}
+
+.shop-card {
+  min-width: 0;
+  padding: 6px;
+  border: 2px solid #000;
+  background: var(--ion-color-primary);
+  box-shadow: 4px 4px 0 #000;
+  color: #fff;
+}
+
+.item-image {
+  position: relative;
+  aspect-ratio: 1 / 0.82;
+  display: flex;
+  align-items: flex-start;
+  padding: 5px;
+  border: 2px solid #000;
+  background-position: center;
+  background-size: cover;
+  overflow: hidden;
+}
+
+.item-image::before {
+  content: "";
+  position: absolute;
+  inset: 0;
+  background: rgba(255, 255, 255, 0.56);
+}
+
+.item-image h2 {
+  position: relative;
+  z-index: 1;
+  margin: 0;
+  color: #000;
+  font-size: 11px;
+  font-weight: 900;
+  line-height: 1.1;
+}
+
+.item-price {
+  margin-top: 5px;
+  color: #ffe36b;
+  font-size: 11px;
+  font-weight: 900;
+}
+
+.item-actions {
+  display: grid;
+  grid-template-columns: minmax(0, 1fr) 30px;
+  gap: 6px;
+  margin-top: 6px;
+}
+
+.buy-btn,
+.info-btn {
+  min-height: 32px;
+  padding: 0 6px;
+  appearance: none;
+  border: 2px solid #000;
+  color: #000;
+  font-family: inherit;
+  font-size: 12px;
+  font-weight: 900;
+  line-height: 1;
+  box-shadow: 2px 2px 0 #000;
+  cursor: pointer;
+}
+
+.buy-btn {
+  background: #fff;
+  text-transform: uppercase;
+}
+
+.info-btn {
+  background: var(--ion-color-secondary);
+  font-style: italic;
+}
+
+.buy-btn:hover,
+.info-btn:hover {
+  filter: brightness(1.06);
+}
+
+.buy-btn:active,
+.info-btn:active {
+  transform: translate(2px, 2px);
+  box-shadow: none;
+}
+
+@media (min-width: 430px) {
+  .shop-grid {
+    grid-template-columns: repeat(4, minmax(0, 1fr));
+  }
+}

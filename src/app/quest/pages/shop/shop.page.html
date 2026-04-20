@@ -1,9 +1,29 @@
 <app-header-toolbar
- [toolbarTitle]="'Shop'" 
- [isDisplayPoint]="true" 
- [totalPoints]="200"
+  [toolbarTitle]="'Shop'"
+  [isDisplayPoint]="true"
+  [totalPoints]="200"
 />
 
-<ion-content class="ion-padding" color="secondary">
-  <p>Welcome to the Shop Page!</p>
+<ion-content color="secondary">
+  <div class="shop-grid">
+    @for(item of rewardItems; track item.id) {
+      <article class="shop-card">
+        <div class="item-image" [style.background-image]="'url(' + item.imageUrl + ')'">
+          <h2>{{ item.name }}</h2>
+        </div>
+
+        <div class="item-price">🪙 {{ item.price }}</div>
+
+        <div class="item-actions">
+          <button class="buy-btn" type="button" (click)="openBuyConfirmation(item)">
+            Buy
+          </button>
+
+          <button class="info-btn" type="button" aria-label="Item info" (click)="openItemInfo(item)">
+            i
+          </button>
+        </div>
+      </article>
+    }
+  </div>
 </ion-content>

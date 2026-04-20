@@ -1,6 +1,25 @@
 .header-section {
-    background: var(--ion-color-secondary);
-    border: none;
-    border-bottom: 2px solid black;
-    box-shadow: none;
+  background: var(--ion-color-secondary);
+  border: none;
+  border-bottom: 2px solid black;
+  box-shadow: none;
+}
+
+ion-content {
+  --padding-start: 14px;
+  --padding-end: 18px;
+  --padding-top: 12px;
+  --padding-bottom: 18px;
+}
+
+.home-shell {
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+}
+
+.objective-list {
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
 }

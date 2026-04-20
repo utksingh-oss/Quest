@@ -1,151 +1,154 @@
-/* 🔥 RESET IONIC DEFAULTS */
-.rules-accordion ion-item {
-  --background: transparent;
-  --padding-start: 0;
-  --inner-padding-end: 0;
+ion-content {
+  --padding-start: 14px;
+  --padding-end: 18px;
+  --padding-top: 14px;
+  --padding-bottom: 18px;
 }
 
-.rules-accordion ion-item::part(native) {
-  padding: 0;
-  background: transparent;
-}
-
-/* 🧱 SINGLE CARD LOOK */
-.rule-header {
-  margin-bottom: 0; /* important */
-}
-
-/* HEADER */
-.rule-row {
-  width: 100%;
+.rules-accordion {
   display: flex;
-  justify-content: space-between;
-  align-items: center;
-
-  padding: 12px;
-
-  background: #6f9fb1;
-  border: 2px solid #000;
-  border-bottom: none; /* 🔥 merges with content */
-
-  box-shadow: 4px 4px 0 #000;
+  flex-direction: column;
+  gap: 14px;
 }
 
-/* CONTENT */
-.rule-content {
-  background: #9ec1cf;
-
+.rule-card {
+  background: var(--ion-color-primary);
   border: 2px solid #000;
-  border-top: none; /* 🔥 merges with header */
-
-  padding: 12px;
-  margin-bottom: 14px;
-
   box-shadow: 4px 4px 0 #000;
-}
-
-/* LEFT */
-.rule-title {
-  font-weight: 600;
-  font-size: 14px;
   color: #f5f5f5;
+  overflow: hidden;
 }
 
-/* RIGHT SIDE */
-.rule-right {
-  display: flex;
+.rule-header {
+  min-height: 72px;
+  display: grid;
+  grid-template-columns: minmax(0, 1fr) 96px 30px 18px;
   align-items: center;
-  gap: 12px;
+  gap: 10px;
+  padding: 10px;
+  background: #6fa9bd;
+  cursor: pointer;
 }
 
-/* REWARDS */
-.xp, .coins {
-  font-size: 12px;
-  font-weight: bold;
+.rule-title-block h2 {
+  margin: 0;
+  font-size: 14px;
+  font-weight: 800;
+  line-height: 1.25;
 }
 
-.xp { color: #ffd54f; }
-.coins { color: #ffca28; }
+.reward-row {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 6px;
+  align-items: center;
+}
 
-/* DELETE BUTTON */
+.reward {
+  display: inline-flex;
+  align-items: center;
+  gap: 3px;
+  color: #ffd84d;
+  font-size: 11px;
+  font-weight: 800;
+  white-space: nowrap;
+}
+
 .delete-btn {
-  width: 26px;
-  height: 26px;
-
-  display: flex;
-  align-items: center;
+  width: 28px;
+  height: 28px;
   justify-content: center;
-
+  display: inline-flex;
+  align-items: center;
+  padding: 0;
   border: 2px solid #000;
-  background: #ff6b6b;
-  font-weight: bold;
-
+  background: #ef6f6c;
+  color: #000;
+  font-size: 13px;
+  font-weight: 900;
+  line-height: 1;
   box-shadow: 2px 2px 0 #000;
 }
 
-/* CHEVRON */
 .chevron {
+  color: #e8f5f7;
   font-size: 18px;
-  color: #333;
+  transition: transform 160ms ease;
 }
 
-/* ACTION BUTTONS */
+.rule-card::part(toggle-icon) {
+  display: none;
+}
+
+.rule-card.accordion-expanded .chevron {
+  transform: rotate(180deg);
+}
+
+.rule-content {
+  padding: 10px;
+  border-top: 2px dashed rgba(0, 0, 0, 0.45);
+  background: #9ec5d0;
+  color: #12242b;
+}
+
+.rule-content p {
+  margin: 0;
+  font-size: 12px;
+  font-weight: 700;
+  line-height: 1.45;
+}
+
 .actions {
-  display: flex;
-  gap: 10px;
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 8px;
   margin-top: 10px;
 }
 
 .btn {
-  flex: 1;
+  min-height: 32px;
   border: 2px solid #000;
-  padding: 6px;
-  font-weight: bold;
-  box-shadow: 3px 3px 0 #000;
+  font-size: 12px;
+  font-weight: 900;
+  box-shadow: 2px 2px 0 #000;
 }
 
-.btn.success { background: #66bb6a; }
-.btn.fail { background: #ef5350; }
+.btn {
+  color: #000;
+}
 
-/* CLICK FEEDBACK */
+.btn.success {
+  background: var(--ion-color-success);
+}
+
+.btn.fail {
+  background: var(--ion-color-danger);
+}
+
 .btn:active,
 .delete-btn:active {
   transform: translate(2px, 2px);
-  box-shadow: 1px 1px 0 #000;
+  box-shadow: none;
 }
 
-/* 🔥 REMOVE IONIC TOGGLE ICON SPACE */
-ion-accordion::part(toggle-icon) {
-  display: none;
-}
+@media (max-width: 360px) {
+  ion-content {
+    --padding-start: 10px;
+    --padding-end: 14px;
+  }
 
-/* ALSO REMOVE EXTRA RIGHT SPACE */
-ion-item::part(native) {
-  padding-right: 0 !important;
-}
+  .rule-header {
+    grid-template-columns: minmax(0, 1fr) 82px 28px 16px;
+    gap: 7px;
+    padding: 9px;
+  }
 
-ion-accordion {
-  --expand-icon-display: none;
-}
+  .reward-row {
+    grid-template-columns: 1fr;
+    gap: 3px;
+  }
 
-/* 🚨 REMOVE TOGGLE CONTAINER COMPLETELY */
-ion-accordion::part(toggle-icon) {
-  display: none !important;
-}
-
-/* 🚨 REMOVE IONIC DETAIL ARROW SPACE */
-ion-item::part(detail-icon) {
-  display: none !important;
-}
-
-/* 🚨 FORCE FULL WIDTH */
-ion-item::part(native) {
-  padding: 0 !important;
-  margin: 0 !important;
-}
-
-/* 🚨 KILL ANY RIGHT SIDE RESERVED SPACE */
-.rules-accordion ion-item {
-  --inner-padding-end: 0 !important;
-  --padding-end: 0 !important;
+  .rule-title-block h2 {
+    font-size: 13px;
+  }
 }

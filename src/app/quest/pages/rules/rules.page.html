@@ -1,51 +1,40 @@
 <app-header-toolbar [toolbarTitle]="'Rules'" [isDisplayPoint]="true" [totalPoints]="200" />
 
-<ion-content class="ion-padding" color="secondary">
-  <ion-accordion-group expand="inset" class="rules-accordion">
-
+<ion-content color="secondary">
+  <ion-accordion-group class="rules-accordion">
     @for(rule of rules; track rule.id){
-     <ion-accordion>
+      <ion-accordion class="rule-card">
+        <div slot="header" class="rule-header">
+          <div class="rule-title-block">
+            <h2>{{ rule.title }}</h2>
+          </div>
 
-    <!-- HEADER -->
-    <!-- IMPORTANT: button="false" -->
-    <ion-item 
-      slot="header" 
-      class="rule-header" 
-      lines="none"
-      button="false"
-      detail="false"
-    >
-      <div class="rule-row">
+          <div class="reward-row" aria-label="Rule rewards">
+            <span class="reward xp">⭐ {{ rule.price.xp }}</span>
+            <span class="reward coins">🪙 {{ rule.price.coins }}</span>
+          </div>
 
-        <div class="rule-title">
-          {{ rule.title }}
+          <button
+            class="delete-btn"
+            type="button"
+            aria-label="Delete rule"
+            (click)="$event.stopPropagation()"
+          >
+            ✕
+          </button>
+
+          <ion-icon name="chevron-down-outline" class="chevron" aria-hidden="true"></ion-icon>
         </div>
 
-        <div class="rule-right">
-          <span class="xp">⭐ {{ rule.price.xp }}</span>
-          <span class="coins">🪙 {{ rule.price.coins }}</span>
+        <div slot="content" class="rule-content">
+          <p>{{ rule.description }}</p>
 
-          <button class="delete-btn">✕</button>
-
-          <!-- Your custom chevron -->
-          <ion-icon name="chevron-down-outline" class="chevron"></ion-icon>
+          <div class="actions">
+            <button class="btn success" type="button">Done</button>
+            <button class="btn fail" type="button">Missed</button>
+          </div>
         </div>
-
-      </div>
-    </ion-item>
-
-    <!-- CONTENT -->
-    <div slot="content" class="rule-content">
-      <p>{{ rule.description }}</p>
-
-      <div class="actions">
-        <button class="btn success">✔ Done</button>
-        <button class="btn fail">✖ Missed</button>
-      </div>
-    </div>
-
-  </ion-accordion>
+      </ion-accordion>
     }
-
   </ion-accordion-group>
 </ion-content>

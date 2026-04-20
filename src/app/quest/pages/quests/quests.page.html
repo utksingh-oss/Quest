@@ -1,11 +1,13 @@
 <app-header-toolbar
- [toolbarTitle]="'Quest'" 
+ [toolbarTitle]="'Quests'" 
  [isDisplayPoint]="true" 
  [totalPoints]="200"
 />
 
-<ion-content class="ion-padding" color="secondary">
-  @for(quest of quests; track quest.id) {
-    <app-quest-card [quest] = "quest"></app-quest-card>
-  }
+<ion-content color="secondary">
+  <div class="quests-shell">
+    @for(quest of quests; track quest.id) {
+      <app-quest-card [quest]="quest"></app-quest-card>
+    }
+  </div>
 </ion-content>

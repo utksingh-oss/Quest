@@ -1,116 +1,97 @@
-/* Main Card */
 .equipment-card {
-  margin: 12px;
-  padding: 6px;
+  margin: 0;
+  padding: 8px;
   background: var(--ion-color-primary);
-  border: 2px solid black;
-  box-shadow: 4px 4px 0px black;
+  border: 2px solid #000;
+  box-shadow: 4px 4px 0 #000;
   color: white;
 }
 
-
-/* Header */
 .character-header {
   display: flex;
   align-items: center;
-  gap: 12px;
+  gap: 8px;
 }
 
-
-/* Avatar */
 .equipment-avatar {
-  width: 60px;
-  height: 60px;
-  border: 1px solid black;
+  width: 54px;
+  height: 54px;
+  border: 2px solid #000;
+  background: #67b8c4;
+  // box-shadow: 2px 2px 0 #000;
 }
 
-
-/* Name */
 .character-name {
-  font-weight: bold;
-  font-size: 1.05rem;
-  color: white;
+  font-weight: 900;
+  font-size: 0.95rem;
+  line-height: 1.1;
 }
 
-
-/* Level + Gold */
 .character-meta {
-  font-size: 0.75rem;
-  opacity: 0.9;
+  margin-top: 3px;
+  color: #ffe36b;
+  font-size: 0.68rem;
+  font-weight: 800;
 }
-
-
-/* Divider */
 
 .sheet-divider {
   height: 2px;
-  background: black;
-  margin: 10px 0;
+  background: #000;
+  margin: 7px 0;
 }
-
-
-/* XP Section */
 
 .xp-row {
   display: flex;
   flex-direction: column;
-  gap: 2px;
+  gap: 3px;
 }
 
+.xp-header {
+  display: flex;
+  justify-content: space-between;
+  gap: 8px;
+}
 
 .xp-label {
-  font-size: 0.7rem;
-  font-weight: bold;
-  letter-spacing: 1px;
+  font-size: 0.66rem;
+  font-weight: 900;
 }
 
 .xp-levels {
-  font-size: 0.7rem;
-  font-weight: bold;
-  opacity: 0.9;
+  font-size: 0.66rem;
+  font-weight: 900;
 }
-
 
 .xp-text {
   text-align: right;
-  font-size: 0.7rem;
+  font-size: 0.66rem;
+  font-weight: 800;
 }
 
-
 .xp-bar {
-  height: 12px;
-  border: 2px solid black;
-  border-radius: 0px;
-  /* VERY IMPORTANT — fixes full green issue */
+  height: 10px;
+  border: 2px solid #000;
+  border-radius: 0;
   --background: #2f6f86;
   --progress-background: var(--ion-color-success);
 }
 
-/* Footer Row */
 .xp-footer {
   display: flex;
   justify-content: flex-end;
 }
 
-
-/* Stat Sheet */
-
 .stat-sheet {
   padding: 0;
 }
 
-
-/* Stat Row */
-
-/* Flex Layout */
 .stat-row-flex {
   display: flex;
   align-items: center;
-  font-size: 0.85rem;
+  min-height: 20px;
+  font-size: 0.72rem;
+  font-weight: 800;
 }
-
-
-/* Left Section */
 
 .stat-left {
   display: flex;
@@ -119,30 +100,23 @@
   white-space: nowrap;
 }
 
-
-/* Icon */
-
 .stat-icon {
-  font-size: 0.9rem;
+  font-size: 0.78rem;
 }
 
-
-/* Dotted Leader Line */
 .stat-dots {
   flex: 1;
-  border-bottom: 1px dotted black;
+  border-bottom: 1px dotted rgba(0, 0, 0, 0.7);
   margin: 0 8px;
 }
 
-
-/* Value Numbers */
 .stat-value {
-  font-weight: bold;
+  color: #fff;
+  font-weight: 900;
   min-width: 30px;
   text-align: right;
 }
 
-
 ion-checkbox {
-  --checkbox-background-checked: #6815ec
+  --checkbox-background-checked: #6815ec;
 }
