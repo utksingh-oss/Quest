@@ -4,7 +4,7 @@
     <div class="quest-info" [style.background-image]="questBackgroundImage">
       <span class="quest-status">{{ quest.status }}</span>
       <h3 class="quest-title">{{ quest.title }}</h3>
-      <p class="quest-detail">{{ quest.detail }}</p>
+      <p class="quest-detail">{{ quest.description }}</p>
     </div>
   </div>
 
@@ -24,7 +24,7 @@
 
   <div class="quest-rewards">
     <span>⭐ {{ quest.completionBonus.xp }}</span>
-    <span>🪙 {{ quest.completionBonus.coin }}</span>
+    <span>🪙 {{ quest.completionBonus.gold }}</span>
   </div>
 
   <button class="quest-btn">

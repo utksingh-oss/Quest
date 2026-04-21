@@ -1,6 +1,7 @@
 import { Component, Input, OnInit } from '@angular/core';
 import { Quest, QuestType } from '../../models/quest.model';
 import { NgClass } from '@angular/common';
+import { MOCK_QUESTS } from '../../models/mockData/mock-quests';
 
 @Component({
   selector: 'app-quest-card',
@@ -9,44 +10,7 @@ import { NgClass } from '@angular/common';
   imports: [NgClass],
 })
 export class QuestCardComponent implements OnInit {
-  @Input() quest: Quest = {
-    id: 'quest-001',
-    title: 'Morning Discipline',
-    detail: 'Start the day with focused routines to build momentum.',
-    type: 'discipline',
-    status: 'active',
-    completionBonus: {
-      xp: 0,
-      coin: 0
-    },
-    imageUrl: 'assets/images/scenery_1.jpg',
-    tasks: [
-      {
-        order: 1,
-        objective: {
-          id: 'obj-001',
-          title: 'Wake Up Early',
-          instruction: 'Wake up before 7:00 AM.',
-          difficulty: 'easy',
-          endDate: '2026-04-20',
-
-          isTimedActivity: false,
-          timeDuration: '',
-
-          skills: {
-            willpower: 2,
-          },
-
-          rewards: {
-            xp: 20,
-            gold: 5,
-          },
-
-          completed: false,
-        },
-      },
-    ],
-  };
+  @Input() quest: Quest = MOCK_QUESTS[0];
 
   constructor() {}
 
@@ -65,7 +29,7 @@ export class QuestCardComponent implements OnInit {
   }
 
   get completedTasks() {
-    return this.quest?.tasks.filter((t) => t.objective.completed).length;
+    return this.quest?.tasks.filter((t) => t.isCompleted).length;
   }
 
   get totalTasks() {

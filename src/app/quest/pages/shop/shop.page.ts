@@ -30,11 +30,13 @@ export class ShopPage implements OnInit {
         {
           text: 'Cancel',
           role: 'cancel',
+          id: 'shop-alert-cancel-btn',
           cssClass: 'shop-alert-cancel',
         },
         {
           text: 'Buy',
           role: 'confirm',
+          id: 'shop-alert-buy-btn',
           cssClass: 'shop-alert-confirm',
           handler: () => {
             console.log('Purchased reward item:', item);
@@ -56,6 +58,7 @@ export class ShopPage implements OnInit {
         {
           text: 'Close',
           role: 'cancel',
+          id: 'shop-alert-close-btn',
           cssClass: 'shop-alert-confirm',
         },
       ],

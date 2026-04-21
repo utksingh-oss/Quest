@@ -88,98 +88,140 @@ ion-card {
 }
 
 .shop-alert {
-  --backdrop-opacity: 0.45;
-  --background: var(--ion-color-secondary);
+  --backdrop-opacity: 0.55;
+  --background: transparent;
   --color: #12242b;
-  --max-width: 320px;
-  --width: calc(100% - 48px);
+  --max-width: 340px;
+  --width: calc(100% - 34px);
 }
 
 .shop-alert .alert-wrapper {
+  position: relative;
   border: 2px solid #000;
   border-radius: 0;
-  background: var(--ion-color-secondary) !important;
-  box-shadow: 5px 5px 0 #000;
+  background:
+    linear-gradient(180deg, #c6dee5 0%, #b4d3d9 100%) !important;
+  box-shadow: 7px 7px 0 #000;
   overflow: visible;
 }
 
+.shop-alert .alert-wrapper::before {
+  content: "";
+  position: absolute;
+  inset: 8px;
+  border: 1px dashed rgba(0, 0, 0, 0.24);
+  pointer-events: none;
+}
+
 .shop-alert .alert-head {
-  padding: 14px 14px 8px;
-  background: var(--ion-color-primary);
+  padding: 16px 16px 10px;
+  background:
+    linear-gradient(180deg, #6fa9bd 0%, var(--ion-color-primary) 100%);
   border-bottom: 2px solid #000;
 }
 
 .shop-alert .alert-title {
   color: #fff;
-  font-size: 16px;
+  font-size: 17px;
   font-weight: 900;
+  letter-spacing: 0.02em;
   line-height: 1.2;
+  text-transform: uppercase;
+  text-shadow: 1px 1px 0 rgba(0, 0, 0, 0.25);
 }
 
 .shop-alert .alert-sub-title {
-  margin-top: 4px;
+  margin-top: 6px;
   color: #ffe36b;
   font-size: 12px;
   font-weight: 900;
+  letter-spacing: 0.04em;
+  text-transform: uppercase;
 }
 
 .shop-alert .alert-message {
-  padding: 14px;
-  background: var(--ion-color-secondary);
+  margin: 12px 14px 0;
+  padding: 12px 14px;
+  border: 2px solid #000;
+  background: rgba(255, 255, 255, 0.35);
   color: #12242b;
   font-size: 13px;
   font-weight: 800;
   line-height: 1.45;
   max-height: none;
+  box-shadow: inset 0 0 0 1px rgba(255, 255, 255, 0.28);
 }
 
 .shop-buy-alert .alert-message::before {
   content: "🪙";
   display: inline-block;
-  margin-right: 6px;
+  margin-right: 8px;
 }
 
 .shop-alert .alert-button-group {
   display: grid;
   grid-template-columns: repeat(2, minmax(0, 1fr));
   gap: 8px;
-  padding: 0 14px 14px;
-  background: var(--ion-color-secondary);
+  padding: 14px;
+  background: transparent;
   justify-content: stretch;
+  flex-wrap: unset !important;
 }
 
 .shop-info-alert .alert-button-group {
   grid-template-columns: minmax(0, 1fr);
 }
 
-.shop-alert .alert-button {
-  min-height: 34px;
-  margin: 0;
-  padding: 0 10px;
-  border: 2px solid #000;
-  background: #fff;
-  color: #000;
-  font-family: inherit;
-  font-size: 12px;
-  font-weight: 900;
-  line-height: 1;
-  box-shadow: 2px 2px 0 #000;
-  text-transform: uppercase;
-}
-
-.shop-alert .alert-button-inner {
-  justify-content: center;
-}
-
-.shop-alert .shop-alert-cancel {
-  background: #fff;
-}
-
-.shop-alert .shop-alert-confirm {
-  background: var(--ion-color-success);
-}
-
 .shop-alert .alert-button:active {
-  transform: translate(2px, 2px);
+  transform: translate(3px, 3px);
   box-shadow: none;
+}
+
+.shop-alert #shop-alert-cancel-btn,
+.shop-alert #shop-alert-buy-btn,
+.shop-alert #shop-alert-close-btn {
+  min-width: 0 !important;
+  width: 100% !important;
+  height: 38px !important;
+  margin: 0 !important;
+  padding: 0 12px !important;
+  border: 2px solid #000 !important;
+  border-radius: 0 !important;
+  color: #000 !important;
+  font-family: inherit !important;
+  font-size: 12px !important;
+  font-weight: 900 !important;
+  line-height: 1 !important;
+  text-align: center !important;
+  text-transform: uppercase !important;
+  letter-spacing: 0.04em !important;
+  box-shadow: 3px 3px 0 #000 !important;
+  overflow: visible !important;
+  background-image: none !important;
+}
+
+.shop-alert #shop-alert-cancel-btn .alert-button-inner,
+.shop-alert #shop-alert-buy-btn .alert-button-inner,
+.shop-alert #shop-alert-close-btn .alert-button-inner {
+  justify-content: center !important;
+}
+
+.shop-alert #shop-alert-cancel-btn {
+  background: #f6f8f8 !important;
+  background-color: #f6f8f8 !important;
+}
+
+.shop-alert #shop-alert-buy-btn,
+.shop-alert #shop-alert-close-btn {
+  background: var(--ion-color-success) !important;
+  background-color: var(--ion-color-success) !important;
+}
+
+.shop-info-alert .alert-head {
+  background:
+    linear-gradient(180deg, #7cb6c8 0%, #6fa9bd 100%);
+}
+
+.shop-info-alert .alert-message {
+  font-size: 12.5px;
 }

@@ -2,7 +2,7 @@ import { Component, Input, OnInit } from '@angular/core';
 import { CheckboxCustomEvent, IonCard, IonCheckbox } from '@ionic/angular/standalone';
 import { UpperCasePipe } from '@angular/common';
 import { NgClass } from '@angular/common';
-import { Objective } from '../../models/objective.model';
+import { Task } from '../../models/task.model';
 
 @Component({
   selector: 'app-objective-card',
@@ -11,13 +11,13 @@ import { Objective } from '../../models/objective.model';
   imports: [IonCheckbox, IonCard, UpperCasePipe, NgClass],
 })
 export class ObjectiveCardComponent implements OnInit {
-  @Input() objective!: Objective;
+  @Input() objective!: Task;
   showRewardPop = false;
   private rewardPopTimer?: ReturnType<typeof setTimeout>;
 
   onComplete(event: CheckboxCustomEvent) {
     const isCompleted = event.detail.checked;
-    this.objective.completed = isCompleted;
+    this.objective.isCompleted = isCompleted;
 
     if (isCompleted) {
       this.showRewardPop = false;

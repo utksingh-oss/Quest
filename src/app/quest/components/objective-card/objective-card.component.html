@@ -2,7 +2,7 @@
   class="objective-card-compact"
   [ngClass]="[
     objective.difficulty,
-    objective.completed ? 'completed' : ''
+    objective.isCompleted ? 'completed' : ''
   ]">
 
   <!-- Header Row -->
@@ -23,7 +23,7 @@
     <!-- Circular Checkbox -->
     <ion-checkbox
       class="complete-checkbox"
-      [checked]="objective.completed"
+      [checked]="objective.isCompleted"
       (ionChange)="onComplete($event)">
     </ion-checkbox>
 
@@ -40,7 +40,7 @@
   <div class="meta-row">
 
     <div class="time">
-      ⏱ {{ objective.timeDuration }}
+      ⏱ {{ objective.durationMinutes }}
     </div>
 
     <div class="rewards">

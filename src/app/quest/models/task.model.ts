@@ -1,16 +1,21 @@
-export interface Objective {
-
+export interface Task {
   id: string;
+
+  position: {
+    parentId: string | null;
+    order: number;
+  };
+
   title: string;
   instruction: string;
   difficulty: 'easy' | 'medium' | 'hard' | 'epic';
-  
-  endDate: string;
 
-  isTimedActivity: boolean;
-  timeDuration: string;
+  startDate?: Date;
+  endDate?: Date;
 
-  skills: {
+  durationMinutes?: number; // in minutes
+
+  skills?: {
     intelligence?: number;
     strength?: number;
     willpower?: number;
@@ -21,5 +26,5 @@ export interface Objective {
     gold: number;
   };
 
-  completed?: boolean;
+  isCompleted: boolean;
 }
